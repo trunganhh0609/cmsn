@@ -5,10 +5,10 @@ html, body, .container {
 }
 
 body {
-  background: #e74;
+  /* background: #e74; */
   overflow: hidden;
   /*background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%, #c76075 80%, #e9b64b 95%);*/
-  background-image: url(bg.jpg);
+  background-image: url(dongml.jpg);
 }
 
 div#beach,
@@ -164,7 +164,7 @@ div#sea {
 }
 
 .icons {
-  position: absolute;
+  /* position: absolute; */
   left: 10px;
   /*top:50%;
   width: 100%;*/

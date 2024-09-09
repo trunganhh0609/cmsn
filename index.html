@@ -6,6 +6,7 @@
         <title>happy birth day</title>
         
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://www.youtube.com/iframe_api"></script>
         
     </head>
     <body>
@@ -14,7 +15,7 @@
         <canvas id="canvas"></canvas>                                                                                                                                                                                                                                                                                            
         
         <div id="merrywrap" class="merrywrap">
-            <div class="giftbox">
+            <div class="giftbox" onclick="playVideo()">
                 <div class="cover">
                     <div></div>
                 </div>
@@ -49,7 +50,13 @@
                     <span>g</span>
                 </div>
                 <div class="row">
-                    <span>Chúc Đông sống lâu 100 tuổi nhé.. !</span>
+                    <span>Chúc Đông sớm có người yêu</span>
+                </div>
+                <div class="row">
+                    <span>Ít nhảy cty hơn</span>
+                </div>
+                <div class="row">
+                    <span>Lương 100 củ!!!</span>
                 </div>
                 <div class="row">
                     <span>Happy birth day to you!!!!!</span>
@@ -57,10 +64,39 @@
             </div>
         </div>
         
-        <div id="video"></div>
+        <div id="video" style="display: none;"></div>
         
         
         <script src="js/index.js"></script>
-        
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+    var player;
+
+    // Hàm này sẽ được gọi khi API YouTube đã sẵn sàng
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video', {
+            videoId: 'wqAg3zl80j8',
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    // Khi video đã sẵn sàng, bạn có thể bắt đầu điều khiển nó
+    function onPlayerReady(event) {
+        event.target.playVideo(); // Bạn có thể bật autoplay nếu muốn.
+    }
+
+    // Hàm để phát video
+    function playVideo() {
+        player.playVideo();
+    }
+
+    // Hàm để tạm dừng video
+    function pauseVideo() {
+        player.pauseVideo();
+    }
+</script>
     </body>
 </html>
