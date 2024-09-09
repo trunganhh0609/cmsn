@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   /*background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%, #c76075 80%, #e9b64b 95%);*/
   background-image: url(dongml.jpg);
+  background-size: 500px;
 }
 
 div#beach,
